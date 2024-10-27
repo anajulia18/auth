@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: IDENTITY-SERVICE
+  datasource:
+    url: jdbc:mysql://localhost:3306/fiap?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: root
+    password: admin
+  jpa:
+    hibernate:
+      ddl-auto: none
+      format_sql: true
+    properties:
+      hibernate.dialect: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+
+server:
+  port: 9898
+
+eureka:
+  client:
+    service-url:
+      defaultZone : http://registry:8761/eureka/
